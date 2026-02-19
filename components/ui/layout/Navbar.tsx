@@ -75,8 +75,8 @@ export default function Navbar() {
             {/* Logo Text */}
             <h1
               className="relative px-4 py-2 text-xl font-bold 
-    bg-gradient-to-r from-blue-400 to-violet-400 
-    bg-clip-text text-transparent"
+              bg-gradient-to-r from-blue-400 to-violet-400 
+              bg-clip-text text-transparent"
             >
               &lt;/&gt; Prashant
             </h1>

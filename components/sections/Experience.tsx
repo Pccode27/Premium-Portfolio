@@ -8,14 +8,14 @@ const experiences = [
     date: "November-2025 - Present",
   },
   {
-    title: "Web Developer Intern",
-    company: "Kodbud",
-    date: "June-2025 - August-2025",
-  },
-  {
     title: "Python Automation Intern",
     company: "OWL AI",
     date: "August-2025 - October-2025",
+  },
+  {
+    title: "Web Developer Intern",
+    company: "Kodbud",
+    date: "June-2025 - August-2025",
   },
 ]
 

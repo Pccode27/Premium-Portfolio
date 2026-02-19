@@ -60,6 +60,7 @@ export default function About() {
               src="/avatar.jpg"   // 👈 put your image inside public folder
               alt="Profile"
               fill
+              sizes="(max-width: 768px) 100vw, 50vw"
               className="object-cover"
             />
           </div>
