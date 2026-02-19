@@ -2,6 +2,8 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useEffect } from "react";
 import {
@@ -13,7 +15,9 @@ import {
 } from "react-icons/fa";
 
 export default function Navbar() {
+  const [blast, setBlast] = useState(false);
   const [dark, setDark] = useState(false);
+  const router = useRouter();
 
   useEffect(() => {
     if (dark) {
@@ -34,41 +38,51 @@ export default function Navbar() {
     <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-[#0b0f1a]/70 border-b border-white/10">
       <div className="max-w-7xl mx-auto px-4 md:px-12 py-4 flex justify-between items-center">
         {/* LOGO */}
-        <h1 className="flex items-center gap-3 cursor-pointer group">
-          {/* SVG Logo */}
-          <svg
-            width="38"
-            height="38"
-            viewBox="0 0 100 100"
-            className="transition duration-300 group-hover:scale-110"
-          >
-            <defs>
-              <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                <stop offset="0%" stopColor="#3b82f6" />
-                <stop offset="100%" stopColor="#8b5cf6" />
-              </linearGradient>
-            </defs>
+        <div className="relative group">
+          <motion.div
+            onClick={() => {
+              setBlast(true);
 
-            {/* Background Circle */}
-            <circle cx="50" cy="50" r="45" fill="url(#grad1)" />
-            {/* Code Brackets */}
-            <text
-              x="50%"
-              y="55%"
-              textAnchor="middle"
-              fill="white"
-              fontSize="40"
-              fontWeight="bold"
-              fontFamily="monospace"
+              setTimeout(() => {
+                router.push("/");
+                window.scrollTo({ top: 0, behavior: "smooth" });
+                setBlast(false);
+              }, 400);
+            }}
+            whileTap={{ scale: 0.9 }}
+            className="relative cursor-pointer select-none"
+          >
+            {/* Explosion Ring */}
+            {blast && (
+              <motion.div
+                initial={{ scale: 0, opacity: 0.8 }}
+                animate={{ scale: 2.5, opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="absolute inset-0 rounded-full border-2 border-violet-400"
+              />
+            )}
+
+            {/* Glow Flash */}
+            {blast && (
+              <motion.div
+                initial={{ opacity: 0.7 }}
+                animate={{ opacity: 0 }}
+                transition={{ duration: 0.4 }}
+                className="absolute inset-0 bg-violet-500/30 rounded-xl blur-xl"
+              />
+            )}
+
+            {/* Logo Text */}
+            <h1
+              className="relative px-4 py-2 text-xl font-bold 
+    bg-gradient-to-r from-blue-400 to-violet-400 
+    bg-clip-text text-transparent"
             >
-              {"</>"}
-            </text>
-          </svg>
-          {/* Name */}
-          <span className="text-2xl font-bold bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">
-            Prashant
-          </span>
-        </h1>
+              &lt;/&gt; Prashant
+            </h1>
+          </motion.div>
+        </div>
+
         {/* CENTER LINKS */}
         <div className="hidden md:flex gap-8 text-sm font-medium">
           <Link href="/" className={linkClass("/")}>

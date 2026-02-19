@@ -105,7 +105,7 @@ export default async function ProjectDetail({
   if (!project) return notFound();
 
   return (
-    <section className=" px-6 md:px-20 pt-30 pb-16 relative">
+    <section className=" px-6 md:px-20 pt-30 pb-16 relative overflow-x-hidden">
       <h1
         className=" text-3xl md:text-6xl 
                       font-extrabold 

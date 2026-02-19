@@ -90,7 +90,7 @@ const techConfig: any = {
 
 export default function ProjectsPage() {
   return (
-    <section className="min-h-screen px-6 md:px-20 pt-28 relative">
+    <section className="min-h-screen px-6 md:px-20 pt-28 relative overflow-x-hidden">
       {/* Glow */}
       <div className="absolute top-[-300px] right-[-300px] w-[800px] h-[800px] bg-blue-600/20 blur-[200px] rounded-full -z-10" />
       <div className="absolute bottom-[-300px] left-[-300px] w-[800px] h-[800px] bg-violet-600/20 blur-[200px] rounded-full -z-10" />

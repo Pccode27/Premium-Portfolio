@@ -1,6 +1,6 @@
 export default function ResumePage() {
   return (
-    <section className="min-h-screen px-6 md:px-20 pt-32 pb-20 relative">
+    <section className="min-h-screen px-6 md:px-20 pt-32 pb-20 relative overflow-x-hidden">
       {/* Background Glow */}
       <div className="absolute top-[-250px] right-[-250px] w-[700px] h-[700px] bg-blue-600/20 blur-[180px] rounded-full -z-10" />
       <div className="absolute bottom-[-250px] left-[-250px] w-[700px] h-[700px] bg-violet-600/20 blur-[180px] rounded-full -z-10" />
@@ -18,7 +18,8 @@ export default function ResumePage() {
           Full Stack Developer • React • Next.js • Automations
         </p>
 
-        <div className="flex justify-center gap-6 mt-6 text-sm text-gray-400">
+        <div className="flex flex-wrap justify-center items-center
+         gap-x-6 gap-y-2 mt-6 text-sm text-gray-400">
           <span>📍Bengaluru, India</span>
           <span>
             {" "}

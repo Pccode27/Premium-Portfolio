@@ -47,7 +47,7 @@ function Counter({ value }: { value: number }) {
 
 export default function AboutPage() {
   return (
-    <section className="min-h-screen px-6 md:px-20 pt-32 pb-20 relative">
+    <section className="min-h-screen px-6 md:px-20 pt-32 pb-20 relative overflow-x-hidden">
       {/* Background Glow */}
       {/* Premium Background Shift */}
       <div className="absolute inset-0 -z-10">
