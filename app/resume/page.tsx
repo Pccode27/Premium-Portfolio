@@ -145,7 +145,7 @@ export default function ResumePage() {
         {/* RIGHT SIDE */}
         <div className="space-y-12">
           {/* SKILLS */}
-          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8">
+          <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl p-8  hover:border-emerald-500/40">
             <h2 className="text-2xl font-semibold mb-6 text-cyan-400">
               Skills
             </h2>

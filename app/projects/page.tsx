@@ -17,14 +17,16 @@ import {
   SiCss3,
   SiSqlite,
   SiPython,
-  SiDacia
+  SiDacia,
+  SiHtml5,
+  SiHtop,
 } from "react-icons/si";
 
 const techConfig: any = {
   "Next.js": {
     icon: <SiNextdotjs />,
-    color: "text-white",
-    glow: "shadow-[0_0_15px_rgba(255,255,255,0.4)]",
+    color: "",
+    glow: "shadow-[0_0_15px_rgba(59,130,246,0.25)] dark:shadow-[0_0_25px_rgba(59,130,246,0.5)]",
   },
   React: {
     icon: <SiReact />,
@@ -84,6 +86,11 @@ const techConfig: any = {
   ORM: {
     icon: <SiDacia/>,
     color: "text-fuchsia-400",
+    glow: "shadow-[0_0_15px_rgba(168,85,247,0.6)]",
+  },
+  HTML: {
+    icon: <SiHtop/>,
+    color: "text-teal-800",
     glow: "shadow-[0_0_15px_rgba(168,85,247,0.6)]",
   },
 };

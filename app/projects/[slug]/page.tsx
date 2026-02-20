@@ -16,6 +16,7 @@ import {
   SiHtml5,
   SiJavascript,
   SiRedux,
+  SiVite,
 } from "react-icons/si";
 import { JSX } from "react";
 
@@ -80,6 +81,10 @@ const techConfig: Record<
   },
   Redux: {
     icon: <SiRedux className="text-red-500 text-lg" />,
+    style: "bg-orange-500/10 border-orange-500 shadow-orange-500/30",
+  },
+  Vite: {
+    icon: <SiVite className="text-emerald-600 text-lg" />,
     style: "bg-orange-500/10 border-orange-500 shadow-orange-500/30",
   },
 };

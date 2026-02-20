@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
 import { useEffect } from "react";
+import Container from "../Container";
 import {
   FaGithub,
   FaLinkedin,
@@ -16,26 +17,27 @@ import {
 
 export default function Navbar() {
   const [blast, setBlast] = useState(false);
-  const [dark, setDark] = useState(false);
+  // const [dark, setDark] = useState(false);
   const router = useRouter();
 
-  useEffect(() => {
-    if (dark) {
-      document.documentElement.classList.add("dark");
-    } else {
-      document.documentElement.classList.remove("dark");
-    }
-  }, [dark]);
-
+  // useEffect(() => {
+  //   if (dark) {
+  //     document.documentElement.classList.add("dark");
+  //   } else {
+  //     document.documentElement.classList.remove("dark");
+  //   }
+  // }, [dark]);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const linkClass = (path: string) =>
     `relative pb-1 transition duration-300 ${
-      pathname === path ? "text-blue-400" : "text-gray-300 hover:text-white"
+      pathname === path ? "text-blue-400 dark:text-blue-400" : "text-gray-700 dark:text-gray-300 hover:text-black dark:hover:text-white"
     }`;
 
   return (
-    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-[#0b0f1a]/70 border-b border-white/10">
+    <nav className="fixed top-0 w-full z-50 backdrop-blur-xl bg-white/80
+     dark:bg-black/20 border-b border-gray-200 dark:border-white/10 
+      transition-colors duration-500">
       <div className="max-w-7xl mx-auto px-4 md:px-12 py-4 flex justify-between items-center">
         {/* LOGO */}
         <div className="relative group">
@@ -155,18 +157,7 @@ export default function Navbar() {
           </a>
 
           {/* DARK MODE TOGGLE */}
-          <button
-            onClick={() => setDark(!dark)}
-            className="ml-3 p-2 rounded-full bg-white/5 
-                border border-white/10 hover:scale-110 
-                transition-all duration-300"
-          >
-            {dark ? (
-              <FaSun className="text-yellow-400" />
-            ) : (
-              <FaMoon className="text-blue-400" />
-            )}
-          </button>
+          <Container/>
         </div>
       </div>
       {/* MOBILE DROPDOWN */}

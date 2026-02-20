@@ -12,7 +12,7 @@ import {
 
 const techIcons: Record<string, JSX.Element> = {
   React: <FaReact className="text-blue-400 text-2xl" />,
-  "Next.js": <SiNextdotjs className="text-white text-2xl" />,
+  "Next.js": <SiNextdotjs className="font-bold text-2xl" />,
   "Node.js": <FaNodeJs className="text-green-500 text-2xl" />,
   MongoDB: <SiMongodb className="text-green-400 text-2xl" />,
   Tailwind: <SiTailwindcss className="text-cyan-400 text-2xl" />,
@@ -69,33 +69,31 @@ export default function AboutPage() {
       <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
         {/* LEFT CONTENT */}
         <div>
-          <h2 className="text-2xl font-semibold mb-6 text-white">
+          <h2 className="text-2xl font-semibold mb-6 ">
             Passionate Fresher Developer 🚀
           </h2>
 
-          <p className="text-gray-400 leading-relaxed mb-6">
+          <p className="text-gray-400 leading-relaxed mb-6 font-bold">
             I'm a motivated and detail-oriented MCA graduate, passionate about
             building modern web applications using
-            <span className="text-white"> React, Next.js, and Node.js</span>.
+            <span className="text-blue-300"> React, Next.js, and Node.js</span>.
           </p>
 
-          <p className="text-gray-400 leading-relaxed mb-6">
+          <p className="text-gray-400 leading-relaxed mb-6 font-bold">
             As a fresher, I focus on writing clean code, understanding core
             concepts deeply, and continuously improving my problem-solving
             skills. I enjoy turning ideas into real-world projects and learning
             new technologies along the way.
           </p>
-
-          <p className="text-gray-400 leading-relaxed">
+          <p className="text-gray-400 leading-relaxed font-bold">
             Currently looking for opportunities where I can contribute, grow as
             a developer, and work with experienced teams.
           </p>
-
           {/* Highlight Points */}
           <div className="grid grid-cols-2 gap-4 mt-10">
             <div className="bg-white/5 border border-white/10 p-5 rounded-xl backdrop-blur-md">
               <h3 className="text-xl font-bold text-violet-500">
-                <Counter value={5} />+
+                <Counter value={5}/>+
               </h3>
               <p className="text-sm text-gray-400">Projects Built</p>
             </div>
@@ -149,7 +147,7 @@ export default function AboutPage() {
             <div
               key={tech}
               className="bg-white/5 border border-white/10 backdrop-blur-md 
-           p-6 rounded-xl text-center hover:scale-105 transition"
+           p-6 rounded-xl text-center hover:scale-110 transition"
             >
               <div className="flex flex-col items-center gap-3">
                 {techIcons[tech]}

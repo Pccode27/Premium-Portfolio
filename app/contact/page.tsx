@@ -7,11 +7,15 @@ import { MdEmail } from "react-icons/md";
 
 export default function Contact() {
   return (
-    <section className="min-h-screen pt-32 pb-20 px-6 md:px-20 relative overflow-hidden">
+    <section className="min-h-screen pt-32 pb-20 px-6 md:px-20 relative overflow-x-hidden">
       {/* Background Glow */}
-      <div className="absolute top-[-400px] right-[-400px] w-[1200px] h-[1200px] bg-blue-500/20 blur-[260px] rounded-full -z-10" />
+      <div className="absolute top-[-400px] right-[-400px] w-[600px] h-[600px]
+      md:top-[-400px] md:right-[-400px]
+       md:w-[1200px] md:h-[1200px] bg-blue-500/20 blur-[260px] rounded-full -z-10" />
 
-      <div className="absolute bottom-[-400px] left-[-400px] w-[1200px] h-[1200px] bg-purple-500/20 blur-[260px] rounded-full -z-10" />
+      <div className="absolute bottom-[-400px] left-[-400px] w-[600px] h-[600px]
+      md:bottom-[-400px] md:left-[-400px]
+       md:w-[1200px] md:h-[1200px] bg-purple-500/20 blur-[260px] rounded-full -z-10" />
 
       {/* Heading */}
       <motion.div
@@ -34,7 +38,7 @@ export default function Contact() {
       {/* Grid */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 max-w-6xl mx-auto">
         {/* LEFT SIDE */}
-        <div className="space-y-6 mt-8">
+        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-1 gap-8 mt-8">
           <a
             href="https://github.com/Pccode27"
             target="_blank"
